@@ -12,25 +12,28 @@ public class Encrypt {
 		
 		//Declare variables 
 		Scanner scnr = new Scanner(System.in);
-		//int Num;
-		int n1;
-		int n2;
-		int n3;
-		int n4;
+		int n, n1, n2, n3, n4;
+		
 		
 		//Ask user for input
 		System.out.println("* * Encryption Application * *\n");
-		System.out.println("Enter a 4 digit integer: ");
+		System.out.print("Enter a 4 digit integer: ");
 		
 		//Get integer
-		//Num = scnr.nextInt();
-		n1 = scnr.nextInt();
-		n2 = scnr.nextInt();
-		n3 = scnr.nextInt();
-		n4 = scnr.nextInt();
+		n = scnr.nextInt();
+		
+		//Code to split an integer into its individual digits
+		n1 = n % 10;
+    	n = n / 10;
+    	n2 = n % 10;
+    	n = n / 10;
+    	n3 = n % 10;
+    	n = n / 10;
+    	n4 = n % 10;
+    	n = n / 10;
 		
 		//Test
-		System.out.printf(" %d %d %d %d ", n1, n2, n3, n4);
+		System.out.printf("\nDigit Entered: %d %d %d %d ", n4, n3, n2, n1);
 		
 
 	}
