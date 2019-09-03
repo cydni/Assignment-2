@@ -12,18 +12,25 @@ public class Encrypt {
 		
 		//Declare variables 
 		Scanner scnr = new Scanner(System.in);
-		int Num;
+		//int Num;
+		int n1;
+		int n2;
+		int n3;
+		int n4;
 		
 		//Ask user for input
 		System.out.println("* * Encryption Application * *\n");
 		System.out.println("Enter a 4 digit integer: ");
 		
 		//Get integer
-		Num = scnr.nextInt();
+		//Num = scnr.nextInt();
+		n1 = scnr.nextInt();
+		n2 = scnr.nextInt();
+		n3 = scnr.nextInt();
+		n4 = scnr.nextInt();
 		
-		/*Int var Num will probably need to be changed to an array to 
-		 be able to work with each individual digit buuut I haven't learned that
-		 yet sooo */
+		//Test
+		System.out.printf(" %d %d %d %d ", n1, n2, n3, n4);
 		
 
 	}
