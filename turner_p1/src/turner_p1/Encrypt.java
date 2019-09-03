@@ -13,6 +13,7 @@ public class Encrypt {
 		//Declare variables 
 		Scanner scnr = new Scanner(System.in);
 		int n, n1, n2, n3, n4;
+		int swap;
 		
 		
 		//Ask user for input
@@ -33,7 +34,28 @@ public class Encrypt {
     	n = n / 10;
 		
 		//Test
-		System.out.printf("\nDigit Entered: %d %d %d %d ", n4, n3, n2, n1);
+		System.out.printf("\nDigit Entered: %d%d%d%d ", n4, n3, n2, n1);
+		
+		//Carry out calculations
+		n4 = (n4+7)%10;
+		n3 = (n3+7)%10;
+		n2 = (n2+7)%10;
+		n1 = (n1+7)%10;
+		
+		//Carry out swapping first and third digits (n4 and n2)
+		swap = n4;
+		n4 = n2;
+		n2 = swap;
+		
+		//Carry out swapping second and fourth digits (n3 and n1)
+		swap = n3;
+		n3 = n1;
+		n1 = swap;
+		
+		
+		//Test
+		System.out.printf("\n%d%d%d%d", n4, n3, n2, n1);
+		
 		
 
 	}
