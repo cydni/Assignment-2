@@ -22,30 +22,39 @@ public class BMI {
 	
 	if(choice == 1) {
 		
-	System.out.println("\nYou selected pounds and inches");
+	System.out.println("\nYou selected POUNDS and INCHES");
 	
 	//Get height
-	System.out.print("\nEnter your height: ");
+	System.out.print("\n\nEnter your height (in): ");
 	height = scnr.nextInt();
 	
 	//Get weight
-	System.out.print("\nEnter your weight: ");
+	System.out.print("\nEnter your weight (lbs): ");
 	weight = scnr.nextInt();
 	
+	//Calculation
+	bmi = (703*weight)/(height*height);
 	
 		
+	System.out.println("\nYour BMI is " + bmi);
+	
 	}
 	else if (choice == 2) {
 		
-	System.out.println("\nYou selected kilos and meters");
+	System.out.println("\nYou selected KILOS and METERS");
 	
 	//Get height
-    System.out.print("\nEnter your height: ");
+    System.out.print("\n\nEnter your height (m): ");
 	height = scnr.nextInt();
 		
 	//Get weight
-	System.out.print("\nEnter your weight: ");
+	System.out.print("\nEnter your weight (kgs): ");
 	weight = scnr.nextInt();
+	
+	//Calculation
+	bmi = weight/(height*height);
+	
+	System.out.println("\nYour BMI is " + bmi);
 		
 	}
 	else {
