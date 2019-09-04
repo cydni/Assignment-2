@@ -16,7 +16,7 @@ public class BMI {
 	
 	//Get an option
 	System.out.println("\nCALCULATION OPTIONS: \n\n1. Pounds and inches \n\n2. Kilos and meters\n");
-	System.out.print("Enter your choice (1 or 2): ");
+	System.out.print("\nEnter your choice (1 or 2): ");
 	
 	choice = scnr.nextInt();
 	
