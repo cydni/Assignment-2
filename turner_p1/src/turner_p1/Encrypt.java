@@ -53,10 +53,9 @@ public class Encrypt {
 		n1 = swap;
 		
 		
-		//Test
-		System.out.printf("\n%d%d%d%d", n4, n3, n2, n1);
-		
-		
+		//Print Encrypted Code
+		System.out.printf("\n\nEncrypted Code: %d%d%d%d", n4, n3, n2, n1);
+			
 
 	}
 
