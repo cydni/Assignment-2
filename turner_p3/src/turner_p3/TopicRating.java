@@ -34,9 +34,6 @@ public class TopicRating {
 				System.out.print(topic[i] + ": ");
 				rating = scnr.nextInt();
 				
-				//Formatting 
-				System.out.print("\n");
-				
 			}
 			
 		}
