@@ -16,6 +16,7 @@ public class TopicRating {
 		
 		int i; //row counter
 		int j; //column counter
+		int rating; //variable to hold ratings from 1-10
 		
 		topic[0] = "Politics";
 		topic[1] = "Environment";
@@ -30,9 +31,11 @@ public class TopicRating {
 			for(i = 0; i<5; ++i) { //row counting loop
 				
 				//Prompt and get user rating for all 5 topics
-				System.out.println(topic[i] + ": ");
-			
+				System.out.print(topic[i] + ": ");
+				rating = scnr.nextInt();
 				
+				//Formatting 
+				System.out.print("\n");
 				
 			}
 			
