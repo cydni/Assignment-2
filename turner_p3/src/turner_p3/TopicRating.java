@@ -25,11 +25,13 @@ public class TopicRating {
 		
 		for(j = 0; j<10; ++j) { //column counting loop
 			
-			System.out.println("Hello poller number " + (j+1) + ". Rate the importance of each topic on a scale of 1 to 10. ");
+			System.out.println("\n\nHello poller number " + (j+1) + ". Rate the importance of each topic on a scale of 1 to 10.\n ");
 			
 			for(i = 0; i<5; ++i) { //row counting loop
 				
-		
+				//Prompt and get user rating for all 5 topics
+				System.out.println(topic[i] + ": ");
+			
 				
 				
 			}
