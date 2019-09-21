@@ -14,12 +14,15 @@ public class TopicRating {
 		String[] topic = new String[5];
 		int [][] responses = new int [5][10];
 		double [] avgs = new double [5];
+		int [] pointTotals = new int [5];
 		
 		int i; //row counter
 		int j; //column counter
 		char rate = 'Y'; //variable to let new poller add their responses
 		int pollerNum = 1;
 		int rating; //variable to hold ratings from 1-10 
+		
+		
 		
 		//initialize response array to 0 for all cells
 		for (i = 0; i<5; ++i) {
@@ -70,6 +73,7 @@ public class TopicRating {
 		//Calculate averages
 		for(i=0; i<5; ++i) {
 			for(j=0; j<10; ++j) {
+				
 				avgs[i] = avgs[i] + (responses[i][j] * (j+1));
 			}
 			avgs[i] = avgs[i]/(responses[i][0] + responses[i][1] + responses[i][2] + responses[i][3] + responses[i][4] + responses[i][5] + responses[i][6] + responses[i][7] + responses[i][8] + responses[i][9]);
@@ -92,6 +96,23 @@ public class TopicRating {
 		System.out.println("\n-------------|---|---|---|---|---|---|---|---|---|----|---------");
 		System.out.printf(topic[4] + "     | " + responses[4][0] + " | " + responses[4][1] + " | " + responses[4][2] + " | " + responses [4][3] + " | " + responses[4][4] + " | " + responses[4][5] + " | " + responses[4][6] + " | " + responses[4][7] + " | " + responses[4][8] + " | " + responses[4][9] + "  |  %.2f" , avgs[4]);
 		System.out.println("\n----------------------------------------------------------------");
+	
+		//Find and print highest and lowest point totals
+		
+		//Initialize pointTotal array to 0
+		for (i = 0; i<5; ++i) {
+			pointTotals[i]= 0;
+		}
+		
+		//Calculate point totals
+		for(i=0; i<5; ++i) {
+			for(j=0; j<10; ++j) {
+				
+				pointTotals[i] = pointTotals[i] + (responses[i][j] * (j+1));
+			}
+			
+		}
+	
 	}
 
 }
