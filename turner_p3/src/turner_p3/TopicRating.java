@@ -21,6 +21,14 @@ public class TopicRating {
 		//FIX ME: DO I REALLY NEED THIS VARIABLE?
 		int rating; //variable to hold ratings from 1-10 
 		
+		//initialize response array to 0 for all cells
+		for (i = 0; i<5; ++i) {
+			for (j=0; j<10; ++j) {
+				responses[i][j]=0;
+			}
+		}
+		
+		//Initialize topic array
 		topic[0] = "Politics";
 		topic[1] = "Environment";
 		topic[2] = "Education";
@@ -39,6 +47,9 @@ public class TopicRating {
 				//Prompt and get user rating for all 5 topics
 				System.out.print(topic[i] + ": ");
 				rating = scnr.nextInt();
+				
+				//Populate responses array
+				responses[i][rating-1]+=1;
 					
 			}
 			
@@ -51,22 +62,29 @@ public class TopicRating {
 			
 		}
 		
+		//Formatting
+		System.out.print("\n\n");
 		
-		/*for(j = 0; j<10; ++j) { //column counting loop
-			
-			System.out.println("\n\nHello poller number " + (j+1) + ". Rate the importance of each topic on a scale of 1 to 10.\n ");
-			
-			for(i = 0; i<5; ++i) { //row counting loop
-				
-				//Prompt and get user rating for all 5 topics
-				System.out.print(topic[i] + ": ");
-				rating = scnr.nextInt();
-				
-				
+		//Print data in table form 
+		
+		System.out.println(topic[0] + ": " + responses[0][0] + " " + responses[0][1] + " " + responses[0][2] + " " + responses [0][3] + " " + responses[0][4] + " " + responses[0][5] + " " + responses[0][6] + " " + responses[0][7] + " " + responses[0][8] + " " + responses[0][9]);
+		
+		
+		
+		
+		
+		
+		
+		
+		/*for(i=0; i<5; ++i) {
+			System.out.print("\n" + topic[i]+ ": ");
+			for(j=0; j<10; ++j) {
+				System.out.print(responses[i][j] + " ");
 				
 			}
 			
 		}*/
+	
 		
 	}
 
