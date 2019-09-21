@@ -21,6 +21,10 @@ public class TopicRating {
 		char rate = 'Y'; //variable to let new poller add their responses
 		int pollerNum = 1;
 		int rating; //variable to hold ratings from 1-10 
+		int highestTotal; //to hold VALUE of highest point total
+		int indexHighestTotal = 0; //to hold LOCATION of highest point total
+		int lowestTotal;  //to hold VALUE of lowest point total
+		int indexLowestTotal = 0; //to hold LOCATION of lowest point total
 		
 		
 		
@@ -80,7 +84,7 @@ public class TopicRating {
 		}
 		
 		//Formatting
-		System.out.print("\n\n");
+		System.out.print("\n\n\n");
 		
 		//Print data in table form 
 		
@@ -97,7 +101,6 @@ public class TopicRating {
 		System.out.printf(topic[4] + "     | " + responses[4][0] + " | " + responses[4][1] + " | " + responses[4][2] + " | " + responses [4][3] + " | " + responses[4][4] + " | " + responses[4][5] + " | " + responses[4][6] + " | " + responses[4][7] + " | " + responses[4][8] + " | " + responses[4][9] + "  |  %.2f" , avgs[4]);
 		System.out.println("\n----------------------------------------------------------------");
 	
-		//Find and print highest and lowest point totals
 		
 		//Initialize pointTotal array to 0
 		for (i = 0; i<5; ++i) {
@@ -112,6 +115,28 @@ public class TopicRating {
 			}
 			
 		}
+		
+		//Find and print highest and lowest point totals using loops
+		highestTotal = pointTotals[0];
+		for(i=1; i<5; ++i) {
+			if(pointTotals[i] > highestTotal)
+				indexHighestTotal = i;
+			
+		}
+		System.out.println("\nThe topic with the highest point total is " + topic[indexHighestTotal] + " (" + pointTotals[indexHighestTotal] + " points) .");
+		
+		
+		//Now lowest
+		
+		lowestTotal = pointTotals[0];
+		for(i=1; i<5; ++i) {
+			if(pointTotals[i] < lowestTotal)
+				indexLowestTotal = i;
+			
+		}
+
+		System.out.println("The topic with the lowest point total is " + topic[indexLowestTotal] + " (" + pointTotals[indexLowestTotal] + " points) .");
+		
 	
 	}
 
