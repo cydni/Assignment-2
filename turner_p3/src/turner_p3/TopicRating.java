@@ -13,6 +13,7 @@ public class TopicRating {
 		
 		String[] topic = new String[5];
 		int [][] responses = new int [5][10];
+		double [] avgs = new double [5];
 		
 		int i; //row counter
 		int j; //column counter
@@ -62,17 +63,37 @@ public class TopicRating {
 			
 		}
 		
+		//Initialize average array to 0
+		for (i = 0; i<5; ++i) {
+				avgs[i]= 0.0;
+		}
+		
+		//Calculate averages
+		for(i=0; i<5; ++i) {
+			for(j=0; j<10; ++j) {
+				avgs[i] = avgs[i] + (responses[i][j] * (j+1));
+			}
+			avgs[i] = avgs[i]/(responses[i][0] + responses[i][1] + responses[i][2] + responses[i][3] + responses[i][4] + responses[i][5] + responses[i][6] + responses[i][7] + responses[i][8] + responses[i][9]);
+			//System.out.println("Average of" + topic[i] + " is: " + avgs[i]);
+		}
+		
 		//Formatting
 		System.out.print("\n\n");
 		
 		//Print data in table form 
 		
-		System.out.println(topic[0] + "     | " + responses[0][0] + " " + responses[0][1] + " " + responses[0][2] + " " + responses [0][3] + " " + responses[0][4] + " " + responses[0][5] + " " + responses[0][6] + " " + responses[0][7] + " " + responses[0][8] + " " + responses[0][9]);
-		System.out.println(topic[1] + "  | " + responses[1][0] + " " + responses[1][1] + " " + responses[1][2] + " " + responses [1][3] + " " + responses[1][4] + " " + responses[1][5] + " " + responses[1][6] + " " + responses[1][7] + " " + responses[1][8] + " " + responses[1][9]);
-		System.out.println(topic[2] + "    | " + responses[2][0] + " " + responses[2][1] + " " + responses[2][2] + " " + responses [2][3] + " " + responses[2][4] + " " + responses[2][5] + " " + responses[2][6] + " " + responses[2][7] + " " + responses[2][8] + " " + responses[2][9]);
-		System.out.println(topic[3] + "       | " + responses[3][0] + " " + responses[3][1] + " " + responses[3][2] + " " + responses [3][3] + " " + responses[3][4] + " " + responses[3][5] + " " + responses[3][6] + " " + responses[3][7] + " " + responses[3][8] + " " + responses[3][9]);
-		System.out.println(topic[4] + "     | " + responses[4][0] + " " + responses[4][1] + " " + responses[4][2] + " " + responses [4][3] + " " + responses[4][4] + " " + responses[4][5] + " " + responses[4][6] + " " + responses[4][7] + " " + responses[4][8] + " " + responses[4][9]);
-		
+		System.out.println("TOPICS       | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |");
+		System.out.println("-------------|---|---|---|---|---|---|---|---|---|----|");
+		System.out.println(topic[0] + "     | " + responses[0][0] + " | " + responses[0][1] + " | " + responses[0][2] + " | " + responses [0][3] + " | " + responses[0][4] + " | " + responses[0][5] + " | " + responses[0][6] + " | " + responses[0][7] + " | " + responses[0][8] + " | " + responses[0][9] + "  | ");
+		System.out.println("-------------|---|---|---|---|---|---|---|---|---|----|");
+		System.out.println(topic[1] + "  | " + responses[1][0] + " | " + responses[1][1] + " | " + responses[1][2] + " | " + responses [1][3] + " | " + responses[1][4] + " | " + responses[1][5] + " | " + responses[1][6] + " | " + responses[1][7] + " | " + responses[1][8] + " | " + responses[1][9] + "  | ");
+		System.out.println("-------------|---|---|---|---|---|---|---|---|---|----|");
+		System.out.println(topic[2] + "    | " + responses[2][0] + " | " + responses[2][1] + " | " + responses[2][2] + " | " + responses [2][3] + " | " + responses[2][4] + " | " + responses[2][5] + " | " + responses[2][6] + " | " + responses[2][7] + " | " + responses[2][8] + " | " + responses[2][9] + "  | ");
+		System.out.println("-------------|---|---|---|---|---|---|---|---|---|----|");
+		System.out.println(topic[3] + "       | " + responses[3][0] + " | " + responses[3][1] + " | " + responses[3][2] + " | " + responses [3][3] + " | " + responses[3][4] + " | " + responses[3][5] + " | " + responses[3][6] + " | " + responses[3][7] + " | " + responses[3][8] + " | " + responses[3][9] + "  | ");
+		System.out.println("-------------|---|---|---|---|---|---|---|---|---|----|");
+		System.out.println(topic[4] + "     | " + responses[4][0] + " | " + responses[4][1] + " | " + responses[4][2] + " | " + responses [4][3] + " | " + responses[4][4] + " | " + responses[4][5] + " | " + responses[4][6] + " | " + responses[4][7] + " | " + responses[4][8] + " | " + responses[4][9] + "  | ");
+		System.out.println("------------------------------------------------------");
 	}
 
 }
