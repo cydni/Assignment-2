@@ -137,6 +137,7 @@ public class TopicRating {
 
 		System.out.println("The topic with the lowest point total is " + topic[indexLowestTotal] + " (" + pointTotals[indexLowestTotal] + " points) .");
 		
+		scnr.close();
 	
 	}
 
