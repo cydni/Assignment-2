@@ -67,8 +67,8 @@ public class BMI {
 	//Display Categories
 	/*BMI Categories: 
 	Underweight = <18.5
-	Normal weight = 18.5–24.9 
-	Overweight = 25–29.9 
+	Normal weight = 18.5ï¿½24.9 
+	Overweight = 25ï¿½29.9 
 	Obesity = BMI of 30 or greater */
 	
 	System.out.println("\n\nBMI Categories:");
@@ -77,7 +77,7 @@ public class BMI {
 	System.out.println("\nOverweight = 25-29.9");
 	System.out.println("\nObese = 30+");
 	
-
+	scnr.close();
 	}
 
 }
