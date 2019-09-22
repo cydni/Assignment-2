@@ -52,7 +52,7 @@ public class Decrypt {
 		//Print Decrypted Code
 		System.out.printf("\n\nDecrypted Code: %d%d%d%d", n4, n3, n2,n1);
 				
-		
+		scnr.close();
 
 	}
 

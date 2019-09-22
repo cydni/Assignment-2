@@ -56,7 +56,7 @@ public class Encrypt {
 		//Print Encrypted Code
 		System.out.printf("\n\nEncrypted Code: %d%d%d%d", n4, n3, n2, n1);
 			
-
+		scnr.close();
 	}
 
 }
